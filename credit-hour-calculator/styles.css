@@ -1,57 +1,108 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #F4F4F4;
 }
 
 .calculator {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
     max-width: 400px;
     margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    color: #520C77; /* UST Purple */
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
-    color: #666;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #f9f9f9;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #520C77; /* UST Purple */
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(82, 12, 119, 0.2);
 }
 
 button {
-    background-color: #8A2BE2;
+    background-color: #9E26B5; /* UST Light Purple */
     color: white;
-    padding: 10px 15px;
+    padding: 16px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #7A1BD2;
+    background-color: #8B1F9E; /* darker light purple on hover */
+    transform: translateY(-2px); /* movement on hover */
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 #result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #E0E0E0;
-    border-radius: 4px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #E8E8E8;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+#result p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+#result strong {
+    color: #520C77; /* UST Purple */
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, button {
+        font-size: 16px;
+    }
 }
