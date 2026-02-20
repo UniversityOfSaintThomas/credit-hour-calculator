@@ -24,7 +24,7 @@ function calculateHours() {
 
     resultDiv.style.opacity = 0;
     setTimeout(() => {
-        resultDiv.style.opacity = 1; // Fade in results
+        resultDiv.style.opacity = 1;
     }, 100);
     
     console.log('Result HTML:', resultDiv.innerHTML);
